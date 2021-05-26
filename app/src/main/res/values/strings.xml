@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">PAF</string>
+    <string name="texto_menu_principal">PRINCIPAL - V 1.00</string>
+    <string name="texto_num1">1</string>
+    <string name="texto_num2">2</string>
+    <string name="texto_num3">3</string>
+    <string name="texto_num4">4</string>
+    <string name="texto_num5">5</string>
+    <string name="texto_num6">6</string>
+    <string name="texto_num7">7</string>
+    <string name="texto_num8">8</string>
+    <string name="texto_num9">9</string>
+    <string name="texto_padrao_canc">APAGAR</string>
+    <string name="texto_num0">0</string>
+    <string name="texto_num00">00</string>
+    <string name="texto_virg">,</string>
+    <string name="texto_padrao_ok">OK</string>
+    <string name="texto_atualizar_bd">ATUALIZAR DADOS</string>
+    <string name="texto_vistoriador">MATRIC. VISTORIADOR</string>
+    <string name="texto_data">DATA</string>
+    <string name="texto_nro_linha">NRO LINHA:</string>
+    <string name="texto_padrao_cancelar">CANC.</string>
+    <string name="texto_padrao_salvar">SALVAR</string>
+    <string name="texto_padrao_retornar">RETORNAR</string>
+    <string name="texto_padrao_avancar">AVANÇAR</string>
+    <string name="texto_item_list">TESTE</string>
+    <string name="texto_foto">FOTO</string>
+    <string name="texto_capturar">CAPTURAR</string>
+    <string name="texto_item_default">TESTE</string>
+    <string name="texto_animal">ANIMAL</string>
+    <string name="texto_dig_nome">DIGITAR NOME</string>
+    <string name="texto_localizacao">LOCALIZAÇÃO</string>
+    <string name="texto_observacao">OBSERVAÇÃO</string>
+    <string name="texto_excluir">EXCLUIR FORMULÁRIO</string>
+    <string name="texto_formulario">FORMULÁRIO</string>
+</resources>
