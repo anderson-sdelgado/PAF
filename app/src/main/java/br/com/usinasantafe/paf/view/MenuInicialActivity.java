@@ -72,6 +72,7 @@ public class MenuInicialActivity extends ActivityGeneric {
         }
 
         clearBD();
+        verifEnvio();
 
         if(pafContext.getFormularioCTR().verFormularioAberto()) {
             startTimer();
@@ -196,18 +197,7 @@ public class MenuInicialActivity extends ActivityGeneric {
     private Runnable updateTimerThread = new Runnable() {
 
         public void run() {
-
-            if (EnvioDadosServ.getInstance().getStatusEnvio() == 1) {
-                textViewProcesso.setTextColor(Color.YELLOW);
-                textViewProcesso.setText("Enviando e recebendo de dados...");
-            } else if (EnvioDadosServ.getInstance().getStatusEnvio() == 2) {
-                textViewProcesso.setTextColor(Color.RED);
-                textViewProcesso.setText("Existem dados para serem enviados e recebidos");
-            } else if (EnvioDadosServ.getInstance().getStatusEnvio() == 3) {
-                textViewProcesso.setTextColor(Color.GREEN);
-                textViewProcesso.setText("Todos os Dados já foram enviados e recebidos");
-            }
-
+            verifEnvio();
             if(!VerifDadosServ.getInstance().isVerTerm()) {
                 VerifDadosServ.getInstance().cancelVer();
                 if (progressBar.isShowing()) {
@@ -218,6 +208,25 @@ public class MenuInicialActivity extends ActivityGeneric {
             customHandler.postDelayed(this, 10000);
         }
     };
+
+    public void verifEnvio(){
+        if (pafContext.getConfigCTR().hasElements()) {
+            if (EnvioDadosServ.getInstance().getStatusEnvio() == 1) {
+                textViewProcesso.setTextColor(Color.YELLOW);
+                textViewProcesso.setText("Enviando e recebendo de dados...");
+            } else if (EnvioDadosServ.getInstance().getStatusEnvio() == 2) {
+                textViewProcesso.setTextColor(Color.RED);
+                textViewProcesso.setText("Existem dados para serem enviados e recebidos");
+            } else if (EnvioDadosServ.getInstance().getStatusEnvio() == 3) {
+                textViewProcesso.setTextColor(Color.GREEN);
+                textViewProcesso.setText("Todos os Dados já foram enviados e recebidos");
+            }
+        }
+        else{
+            textViewProcesso.setTextColor(Color.RED);
+            textViewProcesso.setText("Aparelho sem Equipamento");
+        }
+    }
 
     public void atualizarAplic(){
         ConexaoWeb conexaoWeb = new ConexaoWeb();

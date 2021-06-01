@@ -16,7 +16,7 @@
         style="@style/TextViewTituloLista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/texto_localizacao" />
+        android:text="@string/texto_animal" />
 
     <EditText
         android:id="@+id/editTextNomeAnimal"

@@ -15,15 +15,15 @@ public class FormularioDAO {
     public void salvarCabecIniciado(Long nroAparelho){
         FormularioBean formularioBean = new FormularioBean();
         formularioBean.setDthrForm(Tempo.getInstance().dataComHora());
-        formularioBean.setDataInsForm("");
+        formularioBean.setDataInsForm("null");
         formularioBean.setNroAparelhoForm(nroAparelho);
         formularioBean.setLatitudeForm(0D);
         formularioBean.setLongitudeForm(0D);
-        formularioBean.setDescrLocalForm("");
+        formularioBean.setDescrLocalForm("null");
         formularioBean.setIdAnimal(0L);
-        formularioBean.setNomeAnimal("");
+        formularioBean.setNomeAnimal("null");
         formularioBean.setMatricVistoriador(0L);
-        formularioBean.setObservacao("");
+        formularioBean.setObservacao("null");
         formularioBean.setStatusForm(0L);
         formularioBean.insert();
     }

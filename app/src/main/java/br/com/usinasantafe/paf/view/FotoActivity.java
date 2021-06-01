@@ -60,9 +60,8 @@ public class FotoActivity extends ActivityGeneric {
             public void onClick(View v) {
 
                 if(pafContext.getFormularioCTR().verFormularioIniciado()) {
-                    if ((getLongitude() != 0D) || (Tempo.getInstance().dataSHoraComTZ().equals(pafContext.getFormularioCTR().getFormularioIniciado().getDataInsForm()))) {
-                        Log.i("PAF", "LATITUDE = " + getLatitude());
-                        Log.i("PAF", "LONGITUDE = " + getLongitude());
+
+                    if ((getLongitude() != 0D) && (Tempo.getInstance().dataSHoraComTZ().equals(pafContext.getFormularioCTR().getFormularioIniciado().getDataInsForm()))) {
                         pafContext.getFormularioCTR().setLatLongForm(getLatitude(), getLongitude());
                         Intent it = new Intent(FotoActivity.this, ListaAnimalActivity.class);
                         startActivity(it);

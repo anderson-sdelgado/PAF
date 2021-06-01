@@ -13,6 +13,7 @@ import br.com.usinasantafe.paf.model.bean.estaticas.ColabBean;
 import br.com.usinasantafe.paf.model.bean.variaveis.ConfigBean;
 import br.com.usinasantafe.paf.model.bean.variaveis.FormularioBean;
 import br.com.usinasantafe.paf.model.bean.variaveis.FotoBean;
+import br.com.usinasantafe.paf.model.bean.variaveis.LogErroBean;
 
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
@@ -48,6 +49,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 			TableUtils.createTable(cs, ConfigBean.class);
 			TableUtils.createTable(cs, FormularioBean.class);
 			TableUtils.createTable(cs, FotoBean.class);
+			TableUtils.createTable(cs, LogErroBean.class);
 
 		}
 		catch(Exception e){

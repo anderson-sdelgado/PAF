@@ -1,7 +1,5 @@
 package br.com.usinasantafe.paf.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,7 +14,7 @@ import br.com.usinasantafe.paf.R;
 public class LocalizacaoActivity extends ActivityGeneric {
 
     private PAFContext pafContext;
-    private EditText editTextNomeAnimal;
+    private EditText editTextLocalizacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +23,11 @@ public class LocalizacaoActivity extends ActivityGeneric {
 
         pafContext = (PAFContext) getApplication();
 
-        Button buttonRetNomeAnimal = (Button) findViewById(R.id.buttonRetNomeAnimal);
-        Button buttonAvancaNomeAnimal = (Button) findViewById(R.id.buttonAvancaNomeAnimal);
-        editTextNomeAnimal = (EditText) findViewById(R.id.editTextNomeAnimal);
+        Button buttonRetLocalizacao = (Button) findViewById(R.id.buttonRetLocalizacao);
+        Button buttonAvancaLocalizacao = (Button) findViewById(R.id.buttonAvancaLocalizacao);
+        editTextLocalizacao = (EditText) findViewById(R.id.editTextLocalizacao);
 
-        buttonRetNomeAnimal.setOnClickListener(new View.OnClickListener() {
+        buttonRetLocalizacao.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -39,14 +37,15 @@ public class LocalizacaoActivity extends ActivityGeneric {
             }
         });
 
-        buttonAvancaNomeAnimal.setOnClickListener(new View.OnClickListener() {
+        buttonAvancaLocalizacao.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                if (!editTextNomeAnimal.getText().toString().equals("")) {
+                if (!editTextLocalizacao.getText().toString().trim().equals("")) {
 
-                    pafContext.getFormularioCTR().setDescrLocalForm(editTextNomeAnimal.getText().toString());
+                    pafContext.getFormularioCTR().setLatLongForm(0D,0D);
+                    pafContext.getFormularioCTR().setDescrLocalForm(editTextLocalizacao.getText().toString());
                     Intent it = new Intent(LocalizacaoActivity.this, ListaAnimalActivity.class);
                     startActivity(it);
                     finish();
@@ -55,7 +54,7 @@ public class LocalizacaoActivity extends ActivityGeneric {
                 else{
                     AlertDialog.Builder alerta = new AlertDialog.Builder(LocalizacaoActivity.this);
                     alerta.setTitle("ATENÇÃO");
-                    alerta.setMessage("POR FAVOR! DIGITE O NOME DO ANIMAL.");
+                    alerta.setMessage("POR FAVOR! DIGITE A LOCALIZAÇÃO.");
                     alerta.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

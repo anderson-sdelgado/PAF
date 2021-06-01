@@ -133,7 +133,7 @@ public class VistoriadorActivity extends ActivityGeneric {
                         public void onClick(DialogInterface dialog, int which) {
 
                             pafContext.getFormularioCTR().setMatricVistoriadorForm(0L);
-                            Intent it = new Intent(VistoriadorActivity.this, ListaAnimalActivity.class);
+                            Intent it = new Intent(VistoriadorActivity.this, ObservacaoActivity.class);
                             startActivity(it);
                             finish();
 
@@ -171,7 +171,7 @@ public class VistoriadorActivity extends ActivityGeneric {
     }
 
     public void onBackPressed() {
-        Intent it = new Intent(VistoriadorActivity.this, FotoActivity.class);
+        Intent it = new Intent(VistoriadorActivity.this, ListaAnimalActivity.class);
         startActivity(it);
         finish();
     }

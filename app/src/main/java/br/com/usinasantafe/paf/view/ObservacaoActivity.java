@@ -64,7 +64,8 @@ public class ObservacaoActivity extends ActivityGeneric {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
-                            pafContext.getFormularioCTR().setObservacaoForm("");
+                            pafContext.getFormularioCTR().setObservacaoForm("null");
+                            pafContext.getFormularioCTR().abrirForm();
                             Intent it = new Intent(ObservacaoActivity.this, ListaInformacaoActivity.class);
                             startActivity(it);
                             finish();

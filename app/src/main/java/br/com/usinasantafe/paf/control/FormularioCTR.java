@@ -203,7 +203,7 @@ public class FormularioCTR {
         }
 
         JsonObject cabecJsonObj = new JsonObject();
-        cabecJsonObj.add("cabec", formularioJsonArray);
+        cabecJsonObj.add("formulario", formularioJsonArray);
         dadosEnvioBean.setFormulario(cabecJsonObj.toString());
 
         JsonObject fotoJsonObj = new JsonObject();

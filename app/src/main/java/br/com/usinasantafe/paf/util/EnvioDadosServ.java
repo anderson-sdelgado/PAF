@@ -57,8 +57,8 @@ public class EnvioDadosServ {
 
     public void envioLogErro() {
 
-//        ConfigCTR configCTR = new ConfigCTR();
-        String dados = "";//configCTR.dadosEnvioLogErro();
+        ConfigCTR configCTR = new ConfigCTR();
+        String dados = configCTR.dadosEnvioLogErro();
 
         Log.i("PMM", "LOG ERRO = " + dados);
 
@@ -75,9 +75,8 @@ public class EnvioDadosServ {
     //////////////////////VERIFICAÇÃO DE DADOS///////////////////////////
 
     public Boolean verifLogErro() {
-//        ConfigCTR configCTR = new ConfigCTR();
-//        return configCTR.verEnvioLogErro();
-        return true;
+        ConfigCTR configCTR = new ConfigCTR();
+        return configCTR.verEnvioLogErro();
     }
 
     public Boolean verEnvioFormulario() {

@@ -4,8 +4,8 @@ import br.com.usinasantafe.paf.PAFContext;
 
 public class UrlsConexaoHttp {
 
-    public static String urlPrincipal = "http://www.usinasantafe.com.br/pafdev/view/";
-    public static String urlPrincEnvio = "http://www.usinasantafe.com.br/pafdev/view/";
+    public static String urlPrincipal = "http://www.usinasantafe.com.br/paf/view/";
+    public static String urlPrincEnvio = "http://www.usinasantafe.com.br/paf/view/";
 
     public static String localPSTEstatica = "br.com.usinasantafe.paf.model.bean.estaticas.";
     public static String localUrl = "br.com.usinasantafe.paf.util.connHttp.UrlsConexaoHttp";

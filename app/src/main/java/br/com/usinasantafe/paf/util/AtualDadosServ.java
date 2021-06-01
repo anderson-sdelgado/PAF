@@ -116,7 +116,7 @@ public class AtualDadosServ {
 			getBDGenerico.execute(url);
 
 		} catch (Exception e) {
-//			LogErroDAO.getInstance().insert(e);
+			LogErroDAO.getInstance().insert(e);
 		}
 
 	}

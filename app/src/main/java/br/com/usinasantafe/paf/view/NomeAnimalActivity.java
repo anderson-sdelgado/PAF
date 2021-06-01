@@ -13,7 +13,7 @@ import android.widget.EditText;
 import br.com.usinasantafe.paf.PAFContext;
 import br.com.usinasantafe.paf.R;
 
-public class NomeAnimalActivity extends AppCompatActivity {
+public class NomeAnimalActivity extends ActivityGeneric {
 
     private PAFContext pafContext;
     private EditText editTextNomeAnimal;

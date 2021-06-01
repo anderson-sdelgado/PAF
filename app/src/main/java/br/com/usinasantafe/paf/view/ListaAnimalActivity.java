@@ -116,7 +116,7 @@ public class ListaAnimalActivity extends ActivityGeneric {
                 animalList.clear();
 
                 pafContext.getFormularioCTR().setIdAnimalForm(animalBean.getIdAnimal());
-                pafContext.getFormularioCTR().setNomeAnimalForm("");
+                pafContext.getFormularioCTR().setNomeAnimalForm("null");
 
                 if(pafContext.getFormularioCTR().verFormularioIniciado()) {
                     Intent it = new Intent(ListaAnimalActivity.this, VistoriadorActivity.class);
@@ -152,7 +152,7 @@ public class ListaAnimalActivity extends ActivityGeneric {
         buttonDigitarNome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(ListaAnimalActivity.this, ListaInformacaoActivity.class);
+                Intent it = new Intent(ListaAnimalActivity.this, NomeAnimalActivity.class);
                 startActivity(it);
                 finish();
             }

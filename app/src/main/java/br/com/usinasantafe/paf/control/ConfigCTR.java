@@ -38,20 +38,20 @@ public class ConfigCTR {
         configDAO.salvarConfig(nroAparelho);
     }
 
-//    public boolean verEnvioLogErro(){
-//        LogErroDAO logErroDAO = new LogErroDAO();
-//        return logErroDAO.verEnvioLogErro();
-//    }
-//
-//    public String dadosEnvioLogErro(){
-//        LogErroDAO logErroDAO = new LogErroDAO();
-//        return logErroDAO.dadosEnvio();
-//    }
-//
-//    public void updLogErro(String retorno){
-//        LogErroDAO logErroDAO = new LogErroDAO();
-//        logErroDAO.updLogErro(retorno);
-//    }
+    public boolean verEnvioLogErro(){
+        LogErroDAO logErroDAO = new LogErroDAO();
+        return logErroDAO.verEnvioLogErro();
+    }
+
+    public String dadosEnvioLogErro(){
+        LogErroDAO logErroDAO = new LogErroDAO();
+        return logErroDAO.dadosEnvio();
+    }
+
+    public void updLogErro(String retorno){
+        LogErroDAO logErroDAO = new LogErroDAO();
+        logErroDAO.updLogErro(retorno);
+    }
 
 
 }

@@ -25,6 +25,6 @@
     <TextView
         android:id="@+id/textViewProcesso"
         style="@style/TextViewItemList"
-        android:text="@string/texto_item_list" />
+        android:text="@string/texto_inicial" />
 
 </LinearLayout>

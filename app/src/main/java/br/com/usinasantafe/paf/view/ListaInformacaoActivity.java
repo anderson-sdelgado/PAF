@@ -59,7 +59,12 @@ public class ListaInformacaoActivity extends ActivityGeneric {
         else{
             itens.add("VISTORIADOR:");
         }
-        itens.add("OBSERVAÇÃO:\n" + formularioBean.getObservacao());
+        if(formularioBean.getObservacao().equals("null")){
+            itens.add("OBSERVAÇÃO:");
+        }
+        else{
+            itens.add("OBSERVAÇÃO:\n" + formularioBean.getObservacao());
+        }
 
         AdapterList adapterList = new AdapterList(this, itens);
         ListView listViewInforForm = (ListView) findViewById(R.id.listViewInforForm);
